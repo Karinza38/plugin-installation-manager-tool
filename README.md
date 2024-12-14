@@ -42,7 +42,6 @@ jenkins-plugin-cli --plugin-file /tmp/plugins.txt --plugins delivery-pipeline-pl
 cp -r -p /usr/share/jenkins/ref/plugins/. /var/jenkins_home/plugins/.
 exit
 ```
-
 ## CLI Options
 * `--plugin-file` or `-f`: (optional) Path to the plugins.txt, or plugins.yaml file, which contains a list of plugins to install. If this file does not exist, or if the file exists, but does not have a .txt or .yaml/.yml extension, then an error will be thrown. 
 * `--plugin-download-directory` or `-d`: (optional) Directory in which to install plugins. This configuration can also be made via the PLUGIN_DIR environment variable. The directory will be first deleted, then recreated. If no directory configuration is provided, the defaults are C:\ProgramData\Jenkins\Reference\Plugins if the detected operating system is Microsoft Windows, or /usr/share/jenkins/ref/plugins otherwise.
@@ -93,7 +92,7 @@ The following custom version specifiers can also be used:
 
 * `latest` - downloads the latest version from a version specific update center if one exists for the version in the Jenkins war file. If no version specific update center exists, will use the main update center [https://updates.jenkins.io](https://updates.jenkins.io)
 * `experimental` - downloads the latest version from the [experimental update center](https://jenkins.io/doc/developer/publishing/releasing-experimental-updates/), which offers Alpha and Beta versions of plugins. Default value: [https://updates.jenkins.io/experimental](https://updates.jenkins.io/experimental)
-* `incrementals;org.jenkins-ci.plugins.workflow;2.19-rc289.d09828a05a74` - downloads the plugin from the [incrementals repo](https://jenkins.io/blog/2018/05/15/incremental-deployment/). For this option you need to specify groupId of the plugin. Note that this value may change between plugin versions without notice. More information on incrementals and their use for Docker images can be found [here](https://github.com/jenkinsci/incrementals-tools#updating-versions-for-jenkins-docker-images).  
+* `incrementals;org.jenkins-ci.plugins.workflow;2.19-rc289.d09828a05a74` - downloads the plugin from the [incrementals repo](https://jenkins.io/blog/2018/05/15/incremental-deployment/). For this option you need to specify groupId of the plugin. Note that this value may change between plugin versions without notice. More information on incrementals and their use for Docker images can be found [here](https://github.com/jenkinsci/incrementals-tools#updating-versions-for-jenkins-docker-images)
 
 A set of plugins can also be provided through a YAML file, using the following format:
 
